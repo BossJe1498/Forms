@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>IC Forms - Quick Open</title>
+  <style>
+    :root{--tile-w:220px;--tile-h:120px;--gap:16px}
+    body{font-family:Segoe UI,Arial,Helvetica,sans-serif;padding:24px;background:#f7f8fb}
+    h1{margin:0 0 18px 0;font-size:20px}
+    .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(var(--tile-w),1fr));gap:var(--gap);max-width:960px}
+    .tile{display:flex;align-items:center;justify-content:center;height:var(--tile-h);background:#fff;border-radius:8px;box-shadow:0 2px 6px rgba(0,0,0,.08);text-decoration:none;color:#111;border:1px solid #e6e8ef;padding:12px}
+    .tile:hover{box-shadow:0 6px 18px rgba(20,30,60,.12);transform:translateY(-2px)}
+    .tile-content{display:flex;align-items:center;gap:12px}
+    .icon{width:44px;height:44px;flex:0 0 44px;display:inline-block}
+    .label{font-weight:600;font-size:16px}
+    .meta{font-size:12px;color:#666;margin-top:6px}
+    .text-stack{display:flex;flex-direction:column}
+    footer{margin-top:20px;color:#444;font-size:13px}
+  </style>
+</head>
+<body>
+  <h1>Quick Open — IC Forms</h1>
+  <p>Click a tile to open the corresponding Excel file (or folder). If your browser blocks file links, use the PowerShell commands below.</p>
+
+  <div class="grid">
+    <a class="tile" href="../HVI_2025.xlsm" target="_blank">
+      <div class="tile-content">
+        <!-- Excel icon (green sheet) -->
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="3" width="20" height="18" rx="2" fill="#207245" />
+          <rect x="5" y="6" width="6" height="3" fill="#fff" opacity=".9" />
+          <rect x="5" y="10" width="14" height="2" fill="#fff" opacity=".85" />
+          <rect x="5" y="13" width="10" height="2" fill="#fff" opacity=".8" />
+        </svg>
+        <div class="text-stack"><div class="label">HVI_2025.xlsm</div><div class="meta">Open HVI form</div></div>
+      </div>
+    </a>
+
+    <a class="tile" href="../IAAF_2025.xlsm" target="_blank">
+      <div class="tile-content">
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="3" width="20" height="18" rx="2" fill="#1b6b2a" />
+          <path d="M6 7h6v2H6z" fill="#fff" opacity=".95"/>
+          <path d="M6 11h12v2H6z" fill="#fff" opacity=".85"/>
+          <path d="M6 14h8v2H6z" fill="#fff" opacity=".8"/>
+        </svg>
+        <div class="text-stack"><div class="label">IAAF_2025.xlsm</div><div class="meta">Open IAAF form</div></div>
+      </div>
+    </a>
+
+    <a class="tile" href="../IR_2025.xlsm" target="_blank">
+      <div class="tile-content">
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="3" width="20" height="18" rx="2" fill="#1d8bd8" />
+          <rect x="5" y="6" width="6" height="3" fill="#fff" opacity=".9" />
+          <rect x="5" y="10" width="14" height="2" fill="#fff" opacity=".85" />
+        </svg>
+        <div class="text-stack"><div class="label">IR_2025.xlsm</div><div class="meta">Open IR form</div></div>
+      </div>
+    </a>
+
+    <a class="tile" href="../IWT_2025.xlsm" target="_blank">
+      <div class="tile-content">
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="3" width="20" height="18" rx="2" fill="#2a8f4a" />
+          <rect x="5" y="6" width="6" height="3" fill="#fff" opacity=".9" />
+          <rect x="5" y="10" width="14" height="2" fill="#fff" opacity=".85" />
+        </svg>
+        <div class="text-stack"><div class="label">IWT_2025.xlsm</div><div class="meta">Open IWT form</div></div>
+      </div>
+    </a>
+
+    <a class="tile" href="../Template_2025.xlsm" target="_blank">
+      <div class="tile-content">
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <rect x="2" y="3" width="20" height="18" rx="2" fill="#207245" />
+          <rect x="5" y="6" width="6" height="3" fill="#fff" opacity=".9" />
+          <rect x="5" y="10" width="14" height="2" fill="#fff" opacity=".85" />
+        </svg>
+        <div class="text-stack"><div class="label">Template_2025.xlsm</div><div class="meta">Open Template</div></div>
+      </div>
+    </a>
+
+    <a class="tile" href=".." target="_blank">
+      <div class="tile-content">
+        <!-- Folder icon -->
+        <svg class="icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M3 7a2 2 0 0 1 2-2h4l2 2h8a2 2 0 0 1 2 2v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V7z" fill="#f6c85f"/>
+        </svg>
+        <div class="text-stack"><div class="label">Open Forms Folder</div><div class="meta">Open folder in file browser</div></div>
+      </div>
+    </a>
+  </div>
+
+  <footer>
+    <strong>Notes:</strong> Some browsers block direct file:// links for local files. If clicking a tile does nothing, run the PowerShell commands below to open files directly in Excel.
+    <pre style="background:#fff;padding:8px;border-radius:6px;margin-top:8px">Start-Process "c:\\Users\\hutal\\OneDrive\\Desktop\\IC Forms\\HVI_2025.xlsm"
+Start-Process "c:\\Users\\hutal\\OneDrive\\Desktop\\IC Forms\\IAAF_2025.xlsm"
+Start-Process "c:\\Users\\hutal\\OneDrive\\Desktop\\IC Forms\\IR_2025.xlsm"
+Start-Process "c:\\Users\\hutal\\OneDrive\\Desktop\\IC Forms\\IWT_2025.xlsm"
+Start-Process "c:\\Users\\hutal\\OneDrive\\Desktop\\IC Forms\\Template_2025.xlsm"
+Start-Process "c:\\Users\\hutal\\OneDrive\\Desktop\\IC Forms" -WorkingDirectory "c:\\Users\\hutal\\OneDrive\\Desktop\\IC Forms"
+    </pre>
+  </footer>
+</body>
+</html>
